@@ -5,7 +5,6 @@ client = boto3.client('dynamodb')
 dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table('PageCounts')
 tableName = 'PageCounts'
-headers = json.dumps({"Content-Type":"application/json"})
 
 def lambda_handler(event, context):
     try:
