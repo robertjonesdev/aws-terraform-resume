@@ -1,0 +1,171 @@
+:root {
+  --primary-color: #2d3e50;
+  --accent-color: #3498db;
+  --light-grey: #f5f6f7;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 600px) {
+  .header-container {
+    padding: 20px 15px;
+  }
+  #count-display {
+    position: static;
+    transform: none;
+    display: block;
+    margin-top: 10px;
+  }
+}
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.resume-wrapper {
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 1rem;
+}
+
+.header-container {
+  position: relative;
+  text-align: center;
+  padding: 20px 40px; /* Add right padding for count spacing */
+  box-sizing: border-box;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+#count-display {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: #666;
+}
+
+h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--light-grey);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  margin: 0.5rem 0;
+}
+
+.contact-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  color: #666;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 1.5rem;
+}
+
+.company {
+  color: #666;
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+.accomplishments {
+  list-style-type: square;
+  padding-left: 1.25rem;
+}
+
+.accomplishments li {
+  margin-bottom: 0.75rem;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.skill-category h4 {
+  color: var(--accent-color);
+  margin: 0.5rem 0;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-category li {
+  padding: 0.25rem 0;
+}
+
+@media print {
+  body {
+    padding: 0;
+    font-size: 12pt;
+  }
+
+  .container {
+    box-shadow: none;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
