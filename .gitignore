@@ -5,3 +5,5 @@ infra/.terraform.lock.hcl
 infra/terraform.tfstate
 infra/terraform.tfstate.backup
 infra/.terraform/
+infra/lambda/__pycache__
+infra/lambda/.pytest_cache
